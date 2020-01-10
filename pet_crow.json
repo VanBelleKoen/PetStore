@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 444,
+      "category": {
+        "id": 1,
+        "name": "Bird"
+      },
+      "name": "Crow",
+      "photoUrls": ["string"],
+      "tags": [
+        {
+          "id": 1,
+          "name": "Smart"
+        },
+        {
+          "id": 2,
+          "name": "Untrustworthy"
+        },
+        {
+          "id": 3,
+          "name": "Predator"
+        }
+      ],
+      "status": "available"
+    },
+    {
+      "id": 666,
+      "category": {
+        "id": 1,
+        "name": "Bird"
+      },
+      "name": "Pigeon",
+      "photoUrls": ["string"],
+      "tags": [
+        {
+          "id": 4,
+          "name": "Trash"
+        },
+        {
+          "id": 5,
+          "name": "Diseased"
+        }
+      ],
+      "status": "available"
+    },
+    {
+      "id": 777,
+      "category": {
+        "id": 1,
+        "name": "Bird"
+      },
+      "name": "Parrot",
+      "photoUrls": ["string"],
+      "tags": [
+        {
+          "id": 6,
+          "name": "Talkative"
+        },
+        {
+          "id": 2,
+          "name": "Untrustworthy"
+        },
+        {
+          "id": 1,
+          "name": "Smart"
+        }
+      ],
+      "status": "available"
+    }
+  ]
+}
