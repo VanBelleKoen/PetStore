@@ -1,23 +1,22 @@
 import requests
 import json
-import post_pet_petstore
+import common as c
 
-#Get new creature request
+# Get new creature request
 
-#Load the jsonfile for the PetId
-with open('pet_crow.json') as json_file:
-    data = json.load(json_file)
 
-data.update({"status": "dead"})
-id = str(data["id"])
+def modify_request():
+    config = c.get_configuration()
+    data = c.fetch_data()
+    data.update({"status": "dead"})
 
-url = "https://petstore.swagger.io/v2/pet"
-headers = {'Accept':'application/json' }
+    session = requests.session()
 
-req_post = requests.post(url = url, params = id, headers = headers, json = data)
+    for item in data["data"]:
+        item.update({"status": "dead"})
+        req_post = session.post(url=config["url"], headers=config["headers"], json=item)
 
-assert req_post.status_code == 200, "The request failed"
+        assert req_post.status_code == 200, "The request failed"
 
-data_res = json.loads(req_post.content)
-assert data_res["status"] == "dead", "The update failed" 
-
+        data_res = json.loads(req_post.content)
+        assert data_res["status"] == "dead", "The update failed"

@@ -16,3 +16,19 @@ def get_pet():
         # Asserts that the correct creature has been found
         assert req_post.status_code == 200, "The request failed"
         assert data_res == item, "The values are wrong"
+
+
+def get_modified_pet():
+    data = c.fetch_data()
+    config = c.get_configuration()
+
+    for item in data["data"]:
+        item.update({"status": "dead"})
+        url = config["url"] + "/" + str(item["id"])
+
+        req_post = requests.get(url=url)
+        data_res = json.loads(req_post.content)
+
+        # Asserts that the correct creature has been found
+        assert req_post.status_code == 200, "The request failed"
+        assert data_res == item, "The values are wrong"
