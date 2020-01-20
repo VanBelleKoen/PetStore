@@ -1,0 +1,20 @@
+{
+  "id": 44,
+  "category": {
+    "id": 1,
+    "name": "Insect"
+  },
+  "name": "Locust",
+  "photoUrls": ["string"],
+  "tags": [
+    {
+      "id": 4,
+      "name": "Trash"
+    },
+    {
+      "id": 5,
+      "name": "Diseased"
+    }
+  ],
+  "status": "available"
+}
