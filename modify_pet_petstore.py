@@ -5,7 +5,7 @@ import common as c
 # Get new creature request
 
 
-def modify_request():
+def modify_pet():
     config = c.get_configuration()
     data = c.fetch_data()
     data.update({"status": "dead"})

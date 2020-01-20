@@ -22,7 +22,7 @@ def step_get(context):
 
 @When("Modify the new pet")
 def step_post(context):
-    mod.modify_request()
+    mod.modify_pet()
 
 
 @Then("The modified pet can be found")

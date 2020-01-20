@@ -3,7 +3,7 @@ import json
 
 
 def jsonData():
-    with open("pet_locust.json") as json_file:
+    with open("./data/pet_locust.json") as json_file:
         return json.load(json_file)
 
 

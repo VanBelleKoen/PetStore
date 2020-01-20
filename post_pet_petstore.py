@@ -18,3 +18,4 @@ def post_request():
         ), "The returned value is wrong (id)"
         assert json.loads(req.content) == item, "The returned json is wrong"
 
+    
