@@ -8,7 +8,6 @@ import common as c
 def modify_pet():
     config = c.get_configuration()
     data = c.fetch_data()
-    data.update({"status": "dead"})
 
     session = requests.session()
 
